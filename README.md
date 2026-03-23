@@ -20,8 +20,8 @@ Anda dapat menjalankan project ini menggunakan Docker Compose.
    docker compose up -d
    ```
 3. Akses melalui browser pada alamat:
-   - `http://localhost:8080/elly-dian.php`
-   - `http://localhost:8080/dian-elly.php`
+   - `http://localhost:8080/elly-dian`
+   - `http://localhost:8080/dian-elly`
 
 ---
 *Catatan: Anda juga bisa membukanya menggunakan server PHP lokal biasa jika tidak ingin menggunakan Docker.*

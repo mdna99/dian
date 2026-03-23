@@ -39,10 +39,10 @@ $nama_tamu = isset($_GET['nama']) ? htmlspecialchars(urldecode($_GET['nama'])) :
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Boyongan Temanten Dian Nafi' & Elly</title>
+    <title>Boyong Temanten Dian Nafi' & Elly</title>
 
     <!-- Open Graph / Social Media Meta (1920x1080 Portrait) -->
-    <meta property="og:title" content="Walimatul 'Urs - Dian Nafi' & Elly">
+    <meta property="og:title" content="Boyong Temanten - Dian Nafi' & Elly">
     <meta property="og:description" content="Kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami.">
     <meta property="og:image" content="assets/DianEllyDecor-01.jpg">
     <meta property="og:image:width" content="1080">
