@@ -717,9 +717,9 @@ $nama_tamu = isset($_GET['nama']) ? htmlspecialchars(urldecode($_GET['nama'])) :
                     </div>
                 </div>
                 <div class="position-absolute text-center text-light" style="bottom: 60px; border-radius:10px; padding:15px; margin-top:5px; background:none; z-index: 999;">
-                    <p style="margin:0; ">Created & Develope By: <br><a class="text-light"
-                            href="https://instagram.com/bambang.suko/"><span
-                                style="font-weight:bold;">@bambang.suko</span></a></p>
+                    <p style="margin:0; ">Created & Develope By: <br><a class="text-light shadow-sm"
+                            href="https://instagram.com/muh.dna/"><span
+                                style="font-weight:bold;">@muh.dna</span></a></p>
                 </div>
                 <div class="d-flex justify-content-center align-items-end position-absolute" style="flex: 1; bottom: -20px; left: 0; right: 0; overflow: hidden; pointer-events: none; overflow-y: hidden;">
                     <img src="assets/FlowerUP.png" alt="Flower Dekorasi BottomFlower"
