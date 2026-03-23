@@ -55,6 +55,27 @@ $nama_tamu = isset($_GET['nama']) ? htmlspecialchars(urldecode($_GET['nama'])) :
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&family=Sacramento&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom Scroll Animation CSS (AOS Replacement) -->
+    <style>
+        [data-aos] {
+            opacity: 0;
+            transition-property: opacity, transform;
+            transition-duration: 0.8s;
+            transition-timing-function: ease-out;
+        }
+        [data-aos="fade-up"] { transform: translateY(40px); }
+        [data-aos="zoom-in"] { transform: scale(0.8); }
+        [data-aos].aos-animate {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+        [data-aos-delay="100"] { transition-delay: 0.1s; }
+        [data-aos-delay="200"] { transition-delay: 0.2s; }
+        [data-aos-delay="300"] { transition-delay: 0.3s; }
+        [data-aos-delay="400"] { transition-delay: 0.4s; }
+        [data-aos-delay="500"] { transition-delay: 0.5s; }
+        [data-aos-duration="1000"] { transition-duration: 1s; }
+    </style>
 
     <style>
         /* --- 2. CSS CUSTOM (Gaya Mocca & Earth Tone) --- */
@@ -73,6 +94,7 @@ $nama_tamu = isset($_GET['nama']) ? htmlspecialchars(urldecode($_GET['nama'])) :
             background-color: #3a2a20;
             /* warna frame desktop */
             color: var(--mocca-dark);
+            overflow: hidden; /* Dihapus saat buka undangan */
         }
 
         /* Kunci tampilan ke mobile-only */
@@ -82,7 +104,7 @@ $nama_tamu = isset($_GET['nama']) ? htmlspecialchars(urldecode($_GET['nama'])) :
             background-color: var(--cream);
             min-height: 100vh;
             position: relative;
-            overflow: hidden;
+            overflow: hidden; /* Dikembalikan seperti semula */
             box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
         }
 
@@ -417,15 +439,15 @@ $nama_tamu = isset($_GET['nama']) ? htmlspecialchars(urldecode($_GET['nama'])) :
                 <div class="text-center d-flex flex-column justify-content-center align-items-center px-3 pt-5 pb-2 position-relative"
                     style="flex: 2;">
                     <!-- <p class="fst-italic mb-2">Bismillahirrahmanirrahim</p> -->
-                    <h2 class="serif position-relative" style="z-index: 1;"><strong>Walimatul Ursy</strong></h2>
-                    <div class="position-relative d-inline-block" style="z-index: 1;">
+                    <h2 class="serif position-relative" style="z-index: 1;" data-aos="fade-up"><strong>Walimatul Ursy</strong></h2>
+                    <div class="position-relative d-inline-block" style="z-index: 1;" data-aos="zoom-in">
                         <img src="assets/Element-16.png" alt="Element Dekorasi Sayap"
                             class="position-absolute top-50 start-50" style="width: 350px; z-index: 0;">
                         <img src="assets/ED800x800.png" alt="Foto Mempelai" class="img-fluid position-relative"
                             style="max-width: 300px; border-radius: 50%; z-index: 1;">
                     </div>
-                    <h1 class="cursive text-mocca position-relative pt-5" style="z-index: 1;"><strong>Elly & Dian Nafi'</strong></h1>
-                    <p class="lead fw-bold position-relative" style="z-index: 1;">Sabtu, 11 April 2026</p>
+                    <h1 class="cursive text-mocca position-relative pt-5" style="z-index: 1;" data-aos="fade-up" data-aos-duration="1000"><strong>Elly & Dian Nafi'</strong></h1>
+                    <p class="lead fw-bold position-relative" style="z-index: 1;" data-aos="fade-up" data-aos-delay="400">Sabtu, 11 April 2026</p>
                     <!-- <div class="mt-4 px-3" style="max-width: 500px;">
                         <p class="small">"Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu
                             isteri-isteri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya..."
@@ -442,8 +464,8 @@ $nama_tamu = isset($_GET['nama']) ? htmlspecialchars(urldecode($_GET['nama'])) :
 
             <section id="ayat" class="section" style="background-image: url('assets/BGall-02.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 0;">
                 <div class="container text-center">
-                    <h2 class="serif text-mocca"><strong><i>Bismillahirrahmanirrahim</i></strong></h2>
-                    <p class="small"><br>"Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia
+                    <h2 class="serif text-mocca" data-aos="fade-up"><strong><i>Bismillahirrahmanirrahim</i></strong></h2>
+                    <p class="small" data-aos="fade-up"><br>"Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia
                             menciptakan pasangan-pasangan untukmu dari (jenis) dirimu
                             sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya
                             pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."<br><br>
@@ -462,22 +484,22 @@ $nama_tamu = isset($_GET['nama']) ? htmlspecialchars(urldecode($_GET['nama'])) :
                 <div class="text-center d-flex flex-column justify-content-center align-items-center px-3 pt-7 pb-2 position-relative"
                     style="flex: 2;">
                     <!-- <h2 class="serif text-mocca"><br><strong><i>Bismillahirrahmanirrahim</i></strong></h2> -->
-                        <p class="small">Maha suci Allah SWT yang telah menciptakan makhluk-Nya
+                        <p class="small" data-aos="fade-up">Maha suci Allah SWT yang telah menciptakan makhluk-Nya
                         berpasang-pasangan.
                         Tanpa mengurangi rasa hormat, dengan ini kami bermaksud
                         mengundang Bapak/Ibu/Saudara/i untuk hadir pada acara
                         pernikahan kami:</p>
-                    <div class="position-relative d-inline-block" style="z-index: 1;">
+                    <div class="position-relative d-inline-block" style="z-index: 1;" data-aos="zoom-in">
                         <img src="assets/Element-16.png" alt="Element Dekorasi Sayap"
                             class="position-absolute top-50 start-50" style="width: 350px; z-index: 0;">
                         <img src="assets/Potrait-03.png" alt="Foto Mempelai" class="img-fluid shadow-custom position-relative rounded-pill" width="160" height="200"
                             style="object-fit:cover; border: 3px solid var(--mocca-light); z-index: 1;">
                     </div>
                     <br>
-                    <h3 class="cursive-sm text-mocca"><strong>Siti Elly Fatimah</strong></h3>
-                    <p class="small">Putri dari Bapak Abdul Japar <br> & Ibu Ngatmi</p>
-                    <p class="small">Klokah, RT 03 RW 02, Kunduran, Blora</p>
-                    <h1 class="cursive my-2">&</h1>
+                    <h3 class="cursive-sm text-mocca" data-aos="fade-up"><strong>Siti Elly Fatimah</strong></h3>
+                    <p class="small" data-aos="fade-up">Putri dari Bapak Abdul Japar <br> & Ibu Ngatmi</p>
+                    <p class="small" data-aos="fade-up">Klokah, RT 03 RW 02, Kunduran, Blora</p>
+                    <h1 class="cursive my-2" data-aos="fade-up" data-aos-duration="1000">&</h1>
                 </div>
             </section>
             <section id="couple-pria" class="section" style="background-image: url('assets/BGall-04.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 0;">
@@ -490,16 +512,16 @@ $nama_tamu = isset($_GET['nama']) ? htmlspecialchars(urldecode($_GET['nama'])) :
                 
                 <div class="text-center d-flex flex-column justify-content-center align-items-center px-3 pt-5 pb-2 position-relative"
                     style="flex: 2;">
-                    <div class="position-relative d-inline-block" style="z-index: 1;">
+                    <div class="position-relative d-inline-block" style="z-index: 1;" data-aos="zoom-in">
                         <img src="assets/Element-16.png" alt="Element Dekorasi Sayap"
                             class="position-absolute top-50 start-50" style="width: 350px; z-index: 0;">
                         <img src="assets/Potrait-02.png" alt="Foto Mempelai" class="img-fluid shadow-custom position-relative rounded-pill" width="160" height="200"
                             style="object-fit:cover; border: 3px solid var(--mocca-light); z-index: 1;">
                     </div>
                     <br>
-                    <h3 class="cursive-sm text-mocca"><strong>Muhammad Dian Nafi' Aziz</strong></h3>
-                    <p class="small">Putra dari Bapak Abdul Aziz <br> & Ibu Imroah Sya'baniyah</p>
-                    <p class="small">Sedahromo Kidul, RT 01 RW 09, Kartasura, Sukoharjo</p>
+                    <h3 class="cursive-sm text-mocca" data-aos="fade-up"><strong>Muhammad Dian Nafi' Aziz</strong></h3>
+                    <p class="small" data-aos="fade-up">Putra dari Bapak Abdul Aziz <br> & Ibu Imroah Sya'baniyah</p>
+                    <p class="small" data-aos="fade-up">Sedahromo Kidul, RT 01 RW 09, Kartasura, Sukoharjo</p>
                 </div>
                 <div class="d-flex justify-content-center align-items-end position-relative" style="flex: 1; overflow: hidden;">
                     <img src="assets/FlowerUP.png" alt="Flower Dekorasi BottomFlower"
@@ -515,17 +537,17 @@ $nama_tamu = isset($_GET['nama']) ? htmlspecialchars(urldecode($_GET['nama'])) :
                             <img src="assets/Element-11.png" alt="Flower Dekorasi" CropUP
                             class="position-absolute" style="left: -10%; top: -140px; width: 120%; z-index: 1; pointer-events: none;">
                     </div>
-                    <h2 class="serif text-mocca mb-4"><strong>Waktu & Tempat</strong></h2>
-                    <div class="mb-4">
+                    <h2 class="serif text-mocca mb-4" data-aos="fade-up"><strong>Waktu & Tempat</strong></h2>
+                    <div class="mb-4" data-aos="fade-up" data-aos-delay="100">
                         <h5 class="fw-bold"><i class="fas fa-ring me-2"></i>Akad Nikah</h5>
                         <p class="small">Pukul 08.00 WIB</p>
                     </div>
-                    <div class="mb-4">
+                    <div class="mb-4" data-aos="fade-up" data-aos-delay="200">
                         <h5 class="fw-bold"><i class="fas fa-utensils me-2"></i>Resepsi</h5>
                         <p class="small">Pukul 09.00 WIB - Selesai </p>
                     </div>
-                    <hr class="w-50 mx-auto">
-                    <div class="mb-4">
+                    <hr class="w-50 mx-auto" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="mb-4" data-aos="fade-up" data-aos-delay="400">
                         <p class="small"><strong>Sabtu, 11 April 2026</strong></p>
                         <p class="small"><strong>Kediaman Mempelai Wanita</strong> <br> Klokah, RT 03 RW 02, Kunduran, Blora</p>
                     </div>
@@ -560,7 +582,7 @@ $nama_tamu = isset($_GET['nama']) ? htmlspecialchars(urldecode($_GET['nama'])) :
                 <img src="assets/Element-14.png" alt="Element Dekorasi CropUP" class="position-absolute top-0 start-0 w-100" style="height: auto; z-index: 99; pointer-events: none;">
                 <!-- Konten RSVP -->
                 <div class="text-center d-flex flex-column justify-content-center align-items-center px-3 pb-2 position-relative" style="flex: 2;">
-                    <div class="card-custom-rsvp text-center">
+                    <div class="card-custom-rsvp text-center" data-aos="fade-up" data-aos-duration="1000">
                         <h5 class="serif text-mocca mb-3"><strong>R S V P & W I S H E S</strong></h5>
                         <!-- Form RSVP -->
                         <form id="rsvpForm" method="POST">
@@ -611,7 +633,7 @@ $nama_tamu = isset($_GET['nama']) ? htmlspecialchars(urldecode($_GET['nama'])) :
                 style="background-image: url('assets/BGall-08.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 0; overflow: hidden;">
                 <img src="assets/Element-11.png" alt="Element Dekorasi CropUP" class="position-absolute end-0 w-100" style="top: -45px; height: auto; z-index: 99; pointer-events: none;">
                 <div class="text-center d-flex flex-column justify-content-center align-items-center px-3 pb-2 position-relative" style="flex: 2;">
-                    <div class="card-custom-rsvp text-center">
+                    <div class="card-custom-rsvp text-center" data-aos="fade-up" data-aos-duration="1000">
                         <h5 class="serif text-mocca mb-3"><strong>Wedding Gift</strong></h5>
                         <p id="gift-text" class="text-dark text-center mb-3" 
                             style="font-size: 0.9rem; font-family: 'Open Sans', sans-serif;">
@@ -705,15 +727,15 @@ $nama_tamu = isset($_GET['nama']) ? htmlspecialchars(urldecode($_GET['nama'])) :
                 <img src="assets/AwanHome6-15.png" alt="AwanF" class="position-absolute" style="right: 28px; top: 36%; width: 90px; z-index: 2; pointer-events: none;">
                 <div class="text-center d-flex flex-column justify-content-center align-items-center px-3 pt-5 pb-2 position-absolute"
                     style="flex: 2; top: 35%; left: 50%; transform: translate(-50%, -50%);">
-                    <div class="position-relative d-inline-block" style="z-index: 1;">
+                    <div class="position-relative d-inline-block" style="z-index: 1;" data-aos="zoom-in">
                         <img src="assets/Element-16.png" alt="Element Dekorasi Sayap"
                             class="position-absolute top-50 start-50" style="width: 350px; z-index: 0;">
                         <img src="assets/ED800x800.png" alt="Foto Mempelai" class="img-fluid position-relative"
                             style="max-width: 300px; border-radius: 50%; z-index: 1;">
                     </div>
                     <div class="mt-2 px-2" style="max-width: 560px;">
-                        <p class="small">Merupakan suatu kehormatan dan kebahagiaan bagi kami sekeluarga apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan do’a restu kepada kedua mempelai. Atas kehadiran serta do’a restunya, kami ucapkan terima kasih.</p>
-                        <p class="small"><strong>Elly & Dian Nafi'</strong></p>
+                        <p class="small" data-aos="fade-up">Merupakan suatu kehormatan dan kebahagiaan bagi kami sekeluarga apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan do’a restu kepada kedua mempelai. Atas kehadiran serta do’a restunya, kami ucapkan terima kasih.</p>
+                        <p class="small" data-aos="fade-up" data-aos-delay="200"><strong>Elly & Dian Nafi'</strong></p>
                     </div>
                 </div>
                 <div class="position-absolute text-center text-light" style="bottom: 60px; border-radius:10px; padding:15px; margin-top:5px; background:none; z-index: 999;">
@@ -752,6 +774,10 @@ $nama_tamu = isset($_GET['nama']) ? htmlspecialchars(urldecode($_GET['nama'])) :
         const musicControl = document.getElementById('musicControl');
 
         function bukaUndangan() {
+            // Restore overflow saat undangan dibuka (container scroll yg aktif)
+            document.documentElement.style.overflowY = 'auto';
+            document.body.style.overflowY = 'auto';
+
             document.getElementById('cover').style.transform = 'translate(-50%, -100%)';
             document.getElementById('navbar').style.display = 'flex';
 
@@ -838,6 +864,30 @@ $nama_tamu = isset($_GET['nama']) ? htmlspecialchars(urldecode($_GET['nama'])) :
             let randomDelay = (Math.random() * 5).toFixed(2); // 0s - 5s
             awanF.style.animationDuration = randomDuration + 's';
             awanF.style.animationDelay = '-' + randomDelay + 's';
+        });
+    </script>
+
+    <!-- Custom Scroll Observer (AOS Replacement) -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('aos-animate');
+                    } else {
+                        // Hilangkan baris ini jika tidak ingin animasi terjadi berulang saat digulir ke atas
+                        entry.target.classList.remove('aos-animate');
+                    }
+                });
+            }, {
+                root: document.getElementById('main-scroll'),
+                threshold: 0.05
+            });
+
+            // Beri slight delay untuk layout shift
+            setTimeout(() => {
+                document.querySelectorAll('[data-aos]').forEach(el => observer.observe(el));
+            }, 100);
         });
     </script>
 </body>
